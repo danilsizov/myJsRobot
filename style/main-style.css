@@ -1,0 +1,41 @@
+.my-map
+{
+    width:1000px;
+    height:802px;
+    border:2px solid #26a69a;
+}
+
+.Chapy
+{
+    background: #ee6e73;
+    position: relative;
+    top:680px;
+    left:350px;
+    height:120px;
+    width:100px;
+    z-index: 5;
+    transition:0.5s
+}
+
+.radius
+{
+    z-index: 4;
+    background:#26a69a;
+    opacity: .4;
+    height:0px;
+    width:100%;
+    left:0;
+    top:0;
+    position: relative;
+    transition: 0.5s;
+}
+
+.leftbar
+{
+    position: absolute;
+    top:0px;
+    left:1100px;
+    width:300px;
+    height:802px;
+    border:2px solid #26a69a;
+}
