@@ -18,35 +18,50 @@
 </head>
 <body>
     <script src="script/nouislider.js"></script>
-    <div class="my-map">
+    <div class="my-map" id="main-map">
         <div class="Chapy" id="character">
             <div class="radius" id="radius"></div>
         </div>
     </div>
     <div class="leftbar">
+
         <a class="waves-effect waves-light btn-large" onclick="generateMyMap()"><i class="material-icons right">send</i>Generate!</a>
+        <input id="last_name" type="text" class="validate">
+
     </div>
+
     <div class="row">
+
         <div class="col s4">
+
             <form action="#">
+
                 <p class="range-field">
                     <div id="rotate"></div>
                 </p>
             </form>
             <div id="result-rotate"></div>
+
         </div>
+
         <div class="col s4">
+
             <form action="#">
                 <p class="range-field">
                     <div id="step"></div>
                 </p>
             </form>
+
             <div id="result-step"></div>
+
         </div>
+
         <div class="col s4">
             <a class="waves-effect waves-light btn-large" onclick="goToPoint()"><i class="material-icons right">send</i>Start!</a>
         </div>
+
     </div>
+    <script src="script/scanFrontSide.js"></script>
     <script src="script/map-generate.js"></script>
     <script src="script/UI.js"></script>
 </body>

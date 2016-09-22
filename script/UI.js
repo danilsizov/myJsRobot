@@ -54,12 +54,18 @@ stepSlider.noUiSlider.on('update', function( values, handle ){
 function goToPoint(){
     newY=Math.cos(myDegree*(Math.PI/180))*start;
     newX=Math.sin(myDegree*(Math.PI/180))*start;
-    chapy.style.transition="1s";
-    radius.style.transition="1s";
-    chapy.style.top= myY - newY + "px";
-    chapy.style.left= myX + newX + "px";
-    myY=myY - newY;
-    myX=myX + newX;
-    radius.style.top="0px";
-    radius.style.height="0px";
+
+    if(scanFrontSide(myY-newY, myX+newX)){                            //In scan.js
+        chapy.style.transition="1s";
+        radius.style.transition="1s";
+        chapy.style.top= myY - newY + "px";
+        chapy.style.left= myX + newX + "px";
+        myY=myY - newY;
+        myX=myX + newX;
+        radius.style.top="0px";
+        radius.style.height="0px";
+    }
+    else{
+        alert("if You move, robot destroed")
+    }
 }
