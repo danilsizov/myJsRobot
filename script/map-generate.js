@@ -27,8 +27,8 @@ function generateFigure(quantityOfFigure, map) {
     {
         figure[i]=document.createElement('div');
         figure[i].id='figure'+i;
-        figure[i].style.width=(Math.floor(Math.random() * (400 - 200 + 1)) + 200) + 'px';
-        figure[i].style.height=(Math.floor(Math.random() * (400 - 200 + 1)) + 200) + 'px';
+        figure[i].style.width=(Math.floor(Math.random() * (200 - 50 + 1)) + 50) + 'px';
+        figure[i].style.height=(Math.floor(Math.random() * (200 - 50 + 1)) + 50) + 'px';
         figure[i].style.transform="rotate("+ (Math.floor(Math.random() * (360 - 0 + 1)) + 0) + "deg)";
         figure[i].style.background='red';
         figure[i].style.position='absolute';
