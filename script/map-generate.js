@@ -27,15 +27,20 @@ function generateFigure(quantityOfFigure, map) {
     {
         figure[i]=document.createElement('div');
         figure[i].id='figure'+i;
-        figure[i].style.width=(Math.floor(Math.random() * (200 - 50 + 1)) + 50) + 'px';
-        figure[i].style.height=(Math.floor(Math.random() * (200 - 50 + 1)) + 50) + 'px';
-        figure[i].style.transform="rotate("+ (Math.floor(Math.random() * (360 - 0 + 1)) + 0) + "deg)";
+        figure[i].style.width=getRandomSize(200,50) + 'px';
+        figure[i].style.height=getRandomSize(200,50) + 'px';
+        figure[i].style.transform="rotate("+ getRandomSize(360,0) + "deg)";
         figure[i].style.background='red';
         figure[i].style.position='absolute';
-        figure[i].style.top=(Math.floor(Math.random() * (600 - 10 + 1)) + 10) + 'px';
-        figure[i].style.left=(Math.floor(Math.random() * (700 - 10 + 1)) + 10) + 'px';
+        figure[i].style.top=getRandomSize(600,10) + 'px';
+        figure[i].style.left=getRandomSize(700,10) + 'px';
         map.appendChild(figure[i]);
     }
+}
+
+
+function getRandomSize(min,max){
+    return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
 
